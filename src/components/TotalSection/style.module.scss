@@ -1,0 +1,20 @@
+.totalBox{
+    width: 100%;
+    max-width:355px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--total-border-color);
+    border-radius: .25rem;
+    padding: 1.4375rem 1.25rem ;
+    
+}
+
+.totalLeftSide{
+    display: flex;
+    flex-direction: column;
+    gap: .375rem;
+}
+
+.pinkTitle{
+    color: var(--primary-color);
+}
