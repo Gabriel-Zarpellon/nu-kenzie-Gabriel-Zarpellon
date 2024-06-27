@@ -1,32 +1,50 @@
 import { TotalSection } from "../TotalSection";
 import { FinanceInput } from "./FinanceInput";
+import { FinanceSelect } from "./FinanceSelect";
 import styles from "./style.module.scss";
 
-export function FinanceForm() {
+export function FinanceForm({
+  description,
+  setDescription,
+  value,
+  setValue,
+  valueType,
+  setValueType,
+  submit,
+}) {
   return (
-    <div className={styles.sectionLeft}>
-      <div className="container">
-        <form className={styles.form}>
-          <div className={styles.inputContainer}>
-            <FinanceInput label="Descrição" type="text" name="description" placeholder="Digite aqui sua descrição"/>
-            <p className="paragraph faded">Ex: Compra de roupas</p>
-          </div>
+    <div className="container">
+      <form className={styles.form} onSubmit={submit}>
+        <FinanceInput
+          label="Descrição"
+          type="text"
+          name="description"
+          value={description}
+          placeholder="Digite aqui sua descrição"
+          setValue={setDescription}
+        />
+        <p className="paragraph faded">Ex: Compra de roupas</p>
 
-          <div className={styles.inputContainer}>
-          <FinanceInput label="Valor (R$)" type="number" name="value" placeholder="1" min="1"/>
-          </div>
+        <FinanceInput
+          label="Valor (R$)"
+          type="number"
+          name="value"
+          value={value}
+          step="0.01"
+          placeholder="1"
+          min="0.01"
+          setValue={setValue}
+        />
 
-          <div className={styles.inputContainer}>
-            <label className="label" htmlFor="valueType">Tipo de valor</label>
-            <select className="input" name="valueType">
-              <option value="entrada" selected>Entrada</option>
-              <option value="despesa">Despesa</option>
-            </select>
-          </div>
-          <button>Inserir Valor</button>
-        </form>
-      </div>
-      <TotalSection />
+        <FinanceSelect
+          label="Tipo de valor"
+          name="valueType"
+          value={valueType}
+          setValue={setValueType}
+        />
+
+        <button type="submit">Inserir Valor</button>
+      </form>
     </div>
   );
 }

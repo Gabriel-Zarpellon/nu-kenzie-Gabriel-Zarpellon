@@ -10,6 +10,11 @@
   justify-content: space-between;
   gap: 0.625rem;
 
+  p {
+    width: 100%;
+    text-align: left;
+  }
+
   button {
     width: 19.625rem;
     height: 3rem;
@@ -22,12 +27,11 @@
     &:hover {
       background-color: var(--primary-color-hover);
     }
-  }
 
-  .inputContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5625rem;
+    @media (max-width: 380px) {
+      width: 254px;
+      transition: 1s;
+    }
   }
 }
 

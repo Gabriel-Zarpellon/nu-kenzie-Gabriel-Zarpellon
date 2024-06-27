@@ -4,9 +4,8 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  border-left: 0.25rem solid var(--deposit-border-color);
   border-radius: 0.25rem;
-  margin-block: 0.9375rem;
+  margin-block: .625rem;
   padding: 19px 14px;
   background-color: var(--background-grey-color);
 
@@ -16,6 +15,14 @@
     font-size: 0.625rem;
     color: var(--primary-grey-color);
   }
+}
+
+.deposit{
+  border-left: 0.25rem solid var(--deposit-border-color);
+}
+
+.withdraw{
+  border-left: 0.25rem solid var(--withdraw-border-color);
 }
 
 .cardTop {
