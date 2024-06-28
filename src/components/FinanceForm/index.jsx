@@ -40,7 +40,10 @@ export function FinanceForm({
           name="valueType"
           value={valueType}
           setValue={setValueType}
-        />
+        >
+          <option value="Entrada">Entrada</option>
+          <option value="Despesa">Despesa</option>
+        </FinanceSelect>
 
         <button type="submit">Inserir Valor</button>
       </form>
