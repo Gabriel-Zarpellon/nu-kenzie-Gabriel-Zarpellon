@@ -28,10 +28,12 @@ export function FinanceSetion() {
     setValueType("Entrada");
   }
 
-  function deleteTransition(deletingId){
+  function deleteTransition(deletingId) {
     event.preventDefault();
-    
-    setFinanceList((financeList) => financeList.filter(transition => transition.id !== deletingId))
+
+    setFinanceList((financeList) =>
+      financeList.filter((transition) => transition.id !== deletingId)
+    );
   }
 
   return (
@@ -44,7 +46,7 @@ export function FinanceSetion() {
             setValueType={setValueType}
             description={description}
             value={value}
-            valueType = {valueType}
+            valueType={valueType}
             submit={submit}
           />
 
@@ -52,7 +54,10 @@ export function FinanceSetion() {
         </div>
 
         <div className={styles.flexBox}>
-          <FinanceList financeList={financeList} deleteTransition={deleteTransition}/>
+          <FinanceList
+            financeList={financeList}
+            deleteTransition={deleteTransition}
+          />
         </div>
       </div>
     </section>

@@ -1,10 +1,9 @@
 import { Header } from "../../Header";
 
-
-export function PageTemplate({children}) {
+export function PageTemplate({ children }) {
   return (
     <>
-      <Header/>
+      <Header />
       <main>{children}</main>
     </>
   );

@@ -4,7 +4,7 @@ import { PageTemplate } from "../../templates/PageTemplate";
 export function HomePage() {
   return (
     <PageTemplate>
-      <FinanceSetion/>
+      <FinanceSetion />
     </PageTemplate>
   );
 }
