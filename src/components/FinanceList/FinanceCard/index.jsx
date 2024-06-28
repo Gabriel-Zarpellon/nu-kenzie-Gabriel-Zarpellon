@@ -1,6 +1,6 @@
 import styles from "./style.module.scss";
 
-export function FinanceCard({ transition }) {
+export function FinanceCard({ transition, deleteTransition }) {
   
   return (
     <li className={transition.valueType == "Entrada" ? `${styles.card} ${styles.deposit}` : `${styles.card} ${styles.withdraw}`}>
@@ -10,7 +10,7 @@ export function FinanceCard({ transition }) {
       </div>
       <div className={styles.cardBottom}>
         <p className="paragraph">{Number(transition.value).toLocaleString("pt-BR", {style: "currency", currency: "BRL"})}</p>
-        <button>Excluir</button>
+        <button onClick={() => { deleteTransition(transition.id)}}>Excluir</button>
       </div>
     </li>
   );

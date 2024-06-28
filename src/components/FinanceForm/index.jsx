@@ -1,4 +1,3 @@
-import { TotalSection } from "../TotalSection";
 import { FinanceInput } from "./FinanceInput";
 import { FinanceSelect } from "./FinanceSelect";
 import styles from "./style.module.scss";

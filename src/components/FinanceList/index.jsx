@@ -1,7 +1,7 @@
 import { FinanceCard } from "./FinanceCard";
 import styles from "./style.module.scss";
 
-export function FinanceList({ financeList}) {
+export function FinanceList({ financeList, deleteTransition}) {
   return (
     <section className="container">
       <div className={styles.flexBox}>
@@ -10,7 +10,7 @@ export function FinanceList({ financeList}) {
           {financeList.length > 0 ? (
             <ul className={styles.financeList}>
               {financeList.map((transition) => (
-                <FinanceCard key={transition.id} transition={transition} />
+                <FinanceCard key={transition.id} transition={transition} deleteTransition={deleteTransition}/>
               ))}
             </ul>
           ) : (
